@@ -26,11 +26,11 @@ const Carousel = ({ slides, infinite }) => {
   }, [slides]);
 
   const nextSlide = () => {
-    if (currentIndex === slides - 1 && !infinite) {
+    if (currentIndex === carouselData.length - 1 && !infinite) {
       return;
     }
     setTransition('slide');
-    setCurrentIndex((currentIndex + 1) % slides);
+    setCurrentIndex((currentIndex + 1) % carouselData.length);
   };
 
   const prevSlide = () => {
@@ -38,7 +38,7 @@ const Carousel = ({ slides, infinite }) => {
       return;
     }
     setTransition('slide');
-    setCurrentIndex((currentIndex - 1 + slides) % slides);
+    setCurrentIndex((currentIndex - 1 + carouselData.length) % carouselData.length);
   };
 
   return (

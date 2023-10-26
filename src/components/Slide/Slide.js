@@ -25,7 +25,7 @@ const Slide = ({ image, title, subtitle, index, currentIndex, transition }) => {
   return (
     <div style={slideStyle} className={`slide ${active ? 'block' : 'hidden'}`}>
       <div style={imageStyle}>
-        <img src={image} alt={title}  style={{ maxWidth: '100%', height: 'auto' }}/>
+        <img src={`data:image/png;base64,${image}`} alt={title}  style={{ maxWidth: '100%', height: 'auto' }}/>
         <div className='flex flex-col capitalize gap-3' style={contentStyle}>
           <h2 className='font-bold text-[31px]'>{title}</h2>
           <p className='text-[17px]'>{subtitle}</p>
