@@ -17,7 +17,7 @@ const Slide = ({ image, title, subtitle, index, currentIndex, transition }) => {
     bottom: '90px',
     left: '0',
     right: '0',
-    color: 'black',
+    color: 'white',
     padding: '10px',
     textAlign: 'center',
   };
